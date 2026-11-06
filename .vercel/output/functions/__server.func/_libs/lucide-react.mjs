@@ -82,6 +82,16 @@ var createLucideIcon = (iconName, iconNode) => {
 * This source code is licensed under the ISC license.
 * See the LICENSE file in the root directory of this source tree.
 */
+var Check = createLucideIcon("check", [["path", {
+	d: "M20 6 9 17l-5-5",
+	key: "1gmf2c"
+}]]);
+/**
+* @license lucide-react v0.510.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
 var Clock = createLucideIcon("clock", [["circle", {
 	cx: "12",
 	cy: "12",
@@ -339,4 +349,4 @@ var Wind = createLucideIcon("wind", [
 	}]
 ]);
 //#endregion
-export { Snowflake as a, Layers as c, Sun as i, CloudRain as l, TriangleAlert as n, PocketKnife as o, Thermometer as r, Link2 as s, Wind as t, Clock as u };
+export { Snowflake as a, Layers as c, Check as d, Sun as i, CloudRain as l, TriangleAlert as n, PocketKnife as o, Thermometer as r, Link2 as s, Wind as t, Clock as u };

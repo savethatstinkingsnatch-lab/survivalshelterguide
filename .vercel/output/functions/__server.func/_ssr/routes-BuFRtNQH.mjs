@@ -1,9 +1,9 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { K as require_react, b as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
-import { a as Snowflake, c as Layers, i as Sun, l as CloudRain, o as PocketKnife, r as Thermometer, s as Link2, t as Wind, u as Clock } from "../_libs/lucide-react.mjs";
+import { a as Snowflake, c as Layers, d as Check, i as Sun, l as CloudRain, o as PocketKnife, r as Thermometer, s as Link2, t as Wind, u as Clock } from "../_libs/lucide-react.mjs";
 import { t as clsx } from "../_libs/clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-DEDKun6z.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-BuFRtNQH.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var THREATS = [
@@ -85,28 +85,93 @@ var WORK_ORDER = [
 var RULES = [
 	{
 		n: "01",
+		title: "Warm and dry first",
+		detail: "Hypothermia is the emergency. A finished roof that leaves you wet and on the ground is a failure. Bed, wind block, and dry layers beat carpentry."
+	},
+	{
+		n: "02",
 		title: "Off the ground",
 		detail: "Soil pulls heat out of you even when the air feels mild."
 	},
 	{
-		n: "02",
+		n: "03",
 		title: "Out of the wind",
 		detail: "A low back into the weather beats a tall roof."
 	},
 	{
-		n: "03",
+		n: "04",
 		title: "Not in a wash",
 		detail: "Dry creek beds fill while you are asleep."
 	},
 	{
-		n: "04",
+		n: "05",
 		title: "Small enough to heat",
 		detail: "A hut you can sit up in will stay cold."
 	}
 ];
+var SERIES = "The Education Revolution Pocket Guide, Volume 25: Survival Shelters";
+var AUTHOR = "by Blue and the Awesome Dudes";
+var VOLUME_NOTE = "This volume is emergency and overnight field shelter. It is not a tiny house, cabin, or dwelling. For plumbing, power, and heat in a tiny house, see Volume 24: Tiny Houses.";
+var START_HERE = [
+	"Stop before dark if you can.",
+	"Pick a safe site (not a wash, not under deadfall).",
+	"Get a dry bed off the ground.",
+	"Build the fastest roof that stops wind and rain (tarp if you have one).",
+	"Leave a vent. No fire inside.",
+	"Signal and stay put if you are lost."
+];
+var PERMISSION = [
+	"Practice only where you have permission: public land that allows camping, or private land with the owner’s OK. Obey fire bans and park rules.",
+	"Take the shelter down when you leave. Scatter brush, fill trenches, pack out trash and bright tape.",
+	"Do not cut live trees when dead wood will do."
+];
+var KIDS = ["Children practice with an adult. An adult chooses the site and handles the knife or saw.", "Knives and axes cut deep. Cut away from your body, keep a clear swing path, and stop when your hands are cold and clumsy — that is when injuries happen."];
+var GLOSSARY = [
+	{
+		term: "Bivvy / bivouac",
+		detail: "A short overnight camp with minimal gear."
+	},
+	{
+		term: "Lean-to",
+		detail: "A one-sided roof with its back to the weather."
+	},
+	{
+		term: "Debris hut",
+		detail: "A small stick-and-leaf sleeping shell heated by your body."
+	},
+	{
+		term: "Tarp A-frame",
+		detail: "A sheet folded over a ridgeline into a steep A."
+	},
+	{
+		term: "Snow trench",
+		detail: "A body-sized slot in deep snow with a light roof and a vent."
+	},
+	{
+		term: "Hypothermia",
+		detail: "Dangerous loss of body heat."
+	},
+	{
+		term: "Carbon monoxide",
+		detail: "A deadly gas from burning fuel in a closed space."
+	},
+	{
+		term: "Lee",
+		detail: "The side sheltered from the wind."
+	},
+	{
+		term: "Deadfall",
+		detail: "Dead trees or limbs that can fall."
+	},
+	{
+		term: "Leave No Trace",
+		detail: "Leave the site as you found it."
+	}
+];
+var FOOTER = "Field guidance for getting out of the weather. It is not a rescue service and not a substitute for training. Terrain, weather, and your body decide what is safe. If you are injured or truly lost, signal and stay put. Blue and the Awesome Dudes are not responsible for injury, illness, or death. Part of The Education Revolution pocket guide series. Privacy: This guide does not collect your name, email, or any personal information. Your checklist marks are saved only on your own device.";
 var COLD_WATCH = "If you are shivering hard, slurring, or fumbling simple tasks, stop improving the roof. Get the driest layer you have against your skin, get on the bed, and block the wind. A finished frame does not warm you. Being inside it does.";
 var HEAT_WATCH = "If you stop sweating, feel confused, or feel sick, you are past the point of a nicer roof. Get into shade, off the hot ground, and rest. Wetting your skin only helps when you can spare the water and you are already in the shade.";
-var FIRE_NOTE = "Do not delay the shelter to start a fire. Do not light one inside a debris hut or a snow trench. Smoke, melt, and collapse turn a shelter into a trap.";
+var FIRE_NOTE = "Do not delay the shelter to start a fire. Do not light a fire, stove, or candle inside a debris hut, snow trench, or any closed shelter. Smoke, melt, collapse, and carbon monoxide turn a shelter into a trap. If you make a fire later, keep it outside, small, and legal, with ventilation and a way to put it out. See Volume 21: Making Fire.";
 var SITE = {
 	avoid: [
 		"Dry washes, creek beds, and the bottom of a narrow gully. Water arrives faster than you can climb.",
@@ -257,7 +322,7 @@ var SHELTERS = [
 		minutes: "30–50 min",
 		minutesNote: "Only when the snow is already deep. Digging thin snow just soaks you.",
 		bestFor: "Knee-deep snow or more, when a night outside would otherwise be all wind.",
-		summary: "A slot the width of your shoulders, roofed lightly and vented. Snow is insulation once you are out of the wind. It is also how people get buried if the roof is too heavy or a fire is lit inside.",
+		summary: "A slot the width of your shoulders, roofed lightly and vented. This page teaches a light-roofed snow trench, not a full snow cave. Do not dig a snow shelter alone if you can help it, and do not dig if you are already exhausted or soaked. Snow caves and quinzees need training and a dig partner who can dig you out. Mark the roof. Keep a vent. No fire inside.",
 		materials: [
 			"Snow at least to your knees",
 			"A way to move it: a pot, a plank, a snowshoe, your hands",
@@ -266,7 +331,7 @@ var SHELTERS = [
 			"A stick to mark the roof"
 		],
 		steps: steps("trench", [
-			["Dig only if the snow is knee-deep or more", "If you hit ground in a few scoops, stop. Thin snow will not roof you. Build a debris hut on the surface instead."],
+			["Dig only if the snow is knee-deep or more", "If you hit ground in a few scoops, stop. Thin snow will not roof you. Build a debris hut on the surface instead. Do not dig alone if you can help it, and do not dig if you are already exhausted or soaked."],
 			["Dig a slot just wider than your shoulders", "A little longer than you are tall. Waist deep if the snow allows. Pile what you remove on the windward side as a wall. Smooth the inside so melt cannot drip from a ledge onto your chest."],
 			["Roof it lightly", "Poles or boughs across the trench, then boughs, then just enough snow to stop the wind. You must be able to push the roof off if it slumps. Leave a gap so it does not rest on your chest."],
 			["Keep a fist-sized vent open", "Poke it and check it after you are inside. A closed snow hole fills with air you have already breathed. No stove, no fire, no candle."],
@@ -763,22 +828,32 @@ function Guide() {
 						})]
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
 						"aria-label": "Sections",
-						className: "flex items-center text-sm",
+						className: "flex min-w-0 items-center overflow-x-auto text-sm",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+								href: "#start",
+								className: "inline-flex min-h-11 shrink-0 items-center px-2 text-muted",
+								children: "Start"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 								href: "#weather",
-								className: "inline-flex min-h-11 items-center px-2 text-muted",
+								className: "inline-flex min-h-11 shrink-0 items-center px-2 text-muted",
 								children: "Weather"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 								href: "#build",
-								className: "inline-flex min-h-11 items-center px-2 text-muted",
+								className: "inline-flex min-h-11 shrink-0 items-center px-2 text-muted",
 								children: "Build"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 								href: "#site",
-								className: "inline-flex min-h-11 items-center px-2 text-muted",
+								className: "inline-flex min-h-11 shrink-0 items-center px-2 text-muted",
 								children: "Site"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+								href: "#glossary",
+								className: "inline-flex min-h-11 shrink-0 items-center px-2 text-muted",
+								children: "Words"
 							})
 						]
 					})]
@@ -798,6 +873,14 @@ function Guide() {
 								className: "mt-3 font-display text-display text-ink",
 								children: "Get out of the weather."
 							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "mt-3 text-sm font-medium text-ink",
+								children: SERIES
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "text-sm text-muted",
+								children: AUTHOR
+							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 								className: "mt-4 block h-0.5 w-10 bg-pine",
 								"aria-hidden": true
@@ -805,14 +888,62 @@ function Guide() {
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 								className: "mt-4 max-w-xl text-lg text-muted",
 								children: "A small shelter from what is already on the ground. Safe site, a bed, then a roof. In that order."
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "mt-3 max-w-xl text-sm text-muted",
+								children: VOLUME_NOTE
 							})
 						]
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+						id: "start",
+						className: "scroll-mt-20",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+								className: "font-display text-2xl font-medium text-ink",
+								children: "Start here"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "mt-2 text-muted",
+								children: "Need shelter tonight?"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ol", {
+								className: "mt-4 flex flex-col gap-2",
+								children: START_HERE.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+									className: "flex gap-3 rounded-md border border-line px-4 py-3",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "font-display text-sm text-pine tabular-nums",
+										children: String(index + 1).padStart(2, "0")
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-sm text-ink",
+										children: item
+									})]
+								}, item))
+							})
+						]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 						"aria-label": "Rules that do not change",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ol", {
-							className: "grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-4",
-							children: RULES.map((rule) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+						className: "mt-10",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "rounded-lg border border-pine bg-paper p-4",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "font-display text-sm text-pine tabular-nums",
+									children: RULES[0].n
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+									className: "mt-2 font-display text-lg font-medium text-ink",
+									children: RULES[0].title
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "mt-1 max-w-2xl text-sm text-muted",
+									children: RULES[0].detail
+								})
+							]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ol", {
+							className: "mt-2 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-4",
+							children: RULES.slice(1).map((rule) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
 								className: "bg-paper p-4",
 								children: [
 									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
@@ -829,7 +960,7 @@ function Guide() {
 									})
 								]
 							}, rule.n))
-						})
+						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 						className: "mt-10 grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_20rem]",
@@ -1078,13 +1209,19 @@ function Guide() {
 										className: "mt-4 flex flex-col gap-2",
 										children: shelter.steps.map((step, index) => {
 											const on = Boolean(checks[step.id]);
-											return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("label", {
-												className: cn("flex cursor-pointer gap-3 rounded-md border p-3", on ? "border-pine bg-paper" : "border-line bg-paper"),
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
-													type: "checkbox",
-													className: "mt-1 size-5 shrink-0 accent-pine",
-													checked: on,
-													onChange: () => toggleStep(step.id)
+											return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+												type: "button",
+												role: "checkbox",
+												"aria-checked": on,
+												onClick: () => toggleStep(step.id),
+												className: cn("press flex w-full gap-3 rounded-md border p-3 text-left", on ? "border-pine bg-paper" : "border-line bg-paper"),
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													"aria-hidden": true,
+													className: cn("mt-1 flex size-5 shrink-0 items-center justify-center rounded-sm border", on ? "border-pine bg-pine text-paper" : "border-line bg-paper"),
+													children: on ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, {
+														className: "size-3.5",
+														strokeWidth: 2.5
+													}) : null
 												}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 													className: "min-w-0",
 													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
@@ -1253,11 +1390,59 @@ function Guide() {
 							})
 						]
 					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+						className: "mt-12",
+						"aria-label": "Permission and leave no trace",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							className: "font-display text-2xl font-medium text-ink",
+							children: "Permission and leave no trace"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+							className: "mt-4 flex flex-col gap-3 rounded-lg border border-line p-5",
+							children: PERMISSION.map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+								className: "text-sm text-ink",
+								children: item
+							}, item))
+						})]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+						className: "mt-12",
+						"aria-label": "Children and tools",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							className: "font-display text-2xl font-medium text-ink",
+							children: "Children and tools"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+							className: "mt-4 flex flex-col gap-3 rounded-lg border border-line p-5",
+							children: KIDS.map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", {
+								className: "text-sm text-ink",
+								children: item
+							}, item))
+						})]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+						id: "glossary",
+						className: "mt-12 scroll-mt-20",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							className: "font-display text-2xl font-medium text-ink",
+							children: "Glossary"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("dl", {
+							className: "mt-4",
+							children: GLOSSARY.map((entry) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "border-t border-line py-3",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("dt", {
+									className: "font-medium text-ink",
+									children: entry.term
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("dd", {
+									className: "mt-1 text-sm text-muted",
+									children: entry.detail
+								})]
+							}, entry.term))
+						})]
+					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("footer", {
 						className: "mt-12 border-t border-line pt-6 pb-4",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 							className: "max-w-2xl text-sm text-faint",
-							children: "Field guidance for getting out of the weather. It is not a rescue service and not a substitute for training. Terrain, weather, and your body decide what is safe. If you are injured or truly lost, signal and stay put."
+							children: FOOTER
 						})
 					})
 				]

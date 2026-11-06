@@ -48,11 +48,60 @@ export const WORK_ORDER: { n: string; title: string; detail: string }[] = [
 ];
 
 export const RULES: { n: string; title: string; detail: string }[] = [
-  { n: "01", title: "Off the ground", detail: "Soil pulls heat out of you even when the air feels mild." },
-  { n: "02", title: "Out of the wind", detail: "A low back into the weather beats a tall roof." },
-  { n: "03", title: "Not in a wash", detail: "Dry creek beds fill while you are asleep." },
-  { n: "04", title: "Small enough to heat", detail: "A hut you can sit up in will stay cold." },
+  {
+    n: "01",
+    title: "Warm and dry first",
+    detail:
+      "Hypothermia is the emergency. A finished roof that leaves you wet and on the ground is a failure. Bed, wind block, and dry layers beat carpentry.",
+  },
+  { n: "02", title: "Off the ground", detail: "Soil pulls heat out of you even when the air feels mild." },
+  { n: "03", title: "Out of the wind", detail: "A low back into the weather beats a tall roof." },
+  { n: "04", title: "Not in a wash", detail: "Dry creek beds fill while you are asleep." },
+  { n: "05", title: "Small enough to heat", detail: "A hut you can sit up in will stay cold." },
 ];
+
+export const SERIES = "The Education Revolution Pocket Guide, Volume 25: Survival Shelters";
+
+export const AUTHOR = "by Blue and the Awesome Dudes";
+
+export const VOLUME_NOTE =
+  "This volume is emergency and overnight field shelter. It is not a tiny house, cabin, or dwelling. For plumbing, power, and heat in a tiny house, see Volume 24: Tiny Houses.";
+
+export const START_HERE: string[] = [
+  "Stop before dark if you can.",
+  "Pick a safe site (not a wash, not under deadfall).",
+  "Get a dry bed off the ground.",
+  "Build the fastest roof that stops wind and rain (tarp if you have one).",
+  "Leave a vent. No fire inside.",
+  "Signal and stay put if you are lost.",
+];
+
+export const PERMISSION: string[] = [
+  "Practice only where you have permission: public land that allows camping, or private land with the owner’s OK. Obey fire bans and park rules.",
+  "Take the shelter down when you leave. Scatter brush, fill trenches, pack out trash and bright tape.",
+  "Do not cut live trees when dead wood will do.",
+];
+
+export const KIDS: string[] = [
+  "Children practice with an adult. An adult chooses the site and handles the knife or saw.",
+  "Knives and axes cut deep. Cut away from your body, keep a clear swing path, and stop when your hands are cold and clumsy — that is when injuries happen.",
+];
+
+export const GLOSSARY: { term: string; detail: string }[] = [
+  { term: "Bivvy / bivouac", detail: "A short overnight camp with minimal gear." },
+  { term: "Lean-to", detail: "A one-sided roof with its back to the weather." },
+  { term: "Debris hut", detail: "A small stick-and-leaf sleeping shell heated by your body." },
+  { term: "Tarp A-frame", detail: "A sheet folded over a ridgeline into a steep A." },
+  { term: "Snow trench", detail: "A body-sized slot in deep snow with a light roof and a vent." },
+  { term: "Hypothermia", detail: "Dangerous loss of body heat." },
+  { term: "Carbon monoxide", detail: "A deadly gas from burning fuel in a closed space." },
+  { term: "Lee", detail: "The side sheltered from the wind." },
+  { term: "Deadfall", detail: "Dead trees or limbs that can fall." },
+  { term: "Leave No Trace", detail: "Leave the site as you found it." },
+];
+
+export const FOOTER =
+  "Field guidance for getting out of the weather. It is not a rescue service and not a substitute for training. Terrain, weather, and your body decide what is safe. If you are injured or truly lost, signal and stay put. Blue and the Awesome Dudes are not responsible for injury, illness, or death. Part of The Education Revolution pocket guide series. Privacy: This guide does not collect your name, email, or any personal information. Your checklist marks are saved only on your own device.";
 
 export const COLD_WATCH =
   "If you are shivering hard, slurring, or fumbling simple tasks, stop improving the roof. Get the driest layer you have against your skin, get on the bed, and block the wind. A finished frame does not warm you. Being inside it does.";
@@ -61,7 +110,7 @@ export const HEAT_WATCH =
   "If you stop sweating, feel confused, or feel sick, you are past the point of a nicer roof. Get into shade, off the hot ground, and rest. Wetting your skin only helps when you can spare the water and you are already in the shade.";
 
 export const FIRE_NOTE =
-  "Do not delay the shelter to start a fire. Do not light one inside a debris hut or a snow trench. Smoke, melt, and collapse turn a shelter into a trap.";
+  "Do not delay the shelter to start a fire. Do not light a fire, stove, or candle inside a debris hut, snow trench, or any closed shelter. Smoke, melt, collapse, and carbon monoxide turn a shelter into a trap. If you make a fire later, keep it outside, small, and legal, with ventilation and a way to put it out. See Volume 21: Making Fire.";
 
 const AVOID = [
   "Dry washes, creek beds, and the bottom of a narrow gully. Water arrives faster than you can climb.",
@@ -301,7 +350,7 @@ export const SHELTERS: Shelter[] = [
     minutesNote: "Only when the snow is already deep. Digging thin snow just soaks you.",
     bestFor: "Knee-deep snow or more, when a night outside would otherwise be all wind.",
     summary:
-      "A slot the width of your shoulders, roofed lightly and vented. Snow is insulation once you are out of the wind. It is also how people get buried if the roof is too heavy or a fire is lit inside.",
+      "A slot the width of your shoulders, roofed lightly and vented. This page teaches a light-roofed snow trench, not a full snow cave. Do not dig a snow shelter alone if you can help it, and do not dig if you are already exhausted or soaked. Snow caves and quinzees need training and a dig partner who can dig you out. Mark the roof. Keep a vent. No fire inside.",
     materials: [
       "Snow at least to your knees",
       "A way to move it: a pot, a plank, a snowshoe, your hands",
@@ -312,7 +361,7 @@ export const SHELTERS: Shelter[] = [
     steps: steps("trench", [
       [
         "Dig only if the snow is knee-deep or more",
-        "If you hit ground in a few scoops, stop. Thin snow will not roof you. Build a debris hut on the surface instead.",
+        "If you hit ground in a few scoops, stop. Thin snow will not roof you. Build a debris hut on the surface instead. Do not dig alone if you can help it, and do not dig if you are already exhausted or soaked.",
       ],
       [
         "Dig a slot just wider than your shoulders",

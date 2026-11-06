@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import {
+  Check,
   Clock,
   CloudRain,
   Layers,
@@ -12,16 +13,24 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import {
+  AUTHOR,
   COLD_WATCH,
   EMPTY_KIT,
   FIRE_NOTE,
+  FOOTER,
+  GLOSSARY,
   HEAT_WATCH,
+  KIDS,
   KITS,
+  PERMISSION,
   RULES,
+  SERIES,
   SHELTERS,
   SIGNAL,
   SITE,
+  START_HERE,
   THREATS,
+  VOLUME_NOTE,
   WORK_ORDER,
   kitNotes,
   recommend,
@@ -172,15 +181,21 @@ export function Guide() {
             <span className="font-display text-xl font-medium tracking-tight text-ink">Bivvy</span>
             <span className="hidden text-sm text-faint sm:inline">Small shelter guide</span>
           </a>
-          <nav aria-label="Sections" className="flex items-center text-sm">
-            <a href="#weather" className="inline-flex min-h-11 items-center px-2 text-muted">
+          <nav aria-label="Sections" className="flex min-w-0 items-center overflow-x-auto text-sm">
+            <a href="#start" className="inline-flex min-h-11 shrink-0 items-center px-2 text-muted">
+              Start
+            </a>
+            <a href="#weather" className="inline-flex min-h-11 shrink-0 items-center px-2 text-muted">
               Weather
             </a>
-            <a href="#build" className="inline-flex min-h-11 items-center px-2 text-muted">
+            <a href="#build" className="inline-flex min-h-11 shrink-0 items-center px-2 text-muted">
               Build
             </a>
-            <a href="#site" className="inline-flex min-h-11 items-center px-2 text-muted">
+            <a href="#site" className="inline-flex min-h-11 shrink-0 items-center px-2 text-muted">
               Site
+            </a>
+            <a href="#glossary" className="inline-flex min-h-11 shrink-0 items-center px-2 text-muted">
+              Words
             </a>
           </nav>
         </div>
@@ -190,15 +205,36 @@ export function Guide() {
         <section className="pt-8 pb-6 sm:pt-12">
           <p className="text-xs font-medium tracking-widest text-faint uppercase">Field shelter guide</p>
           <h1 className="mt-3 font-display text-display text-ink">Get out of the weather.</h1>
+          <p className="mt-3 text-sm font-medium text-ink">{SERIES}</p>
+          <p className="text-sm text-muted">{AUTHOR}</p>
           <span className="mt-4 block h-0.5 w-10 bg-pine" aria-hidden />
           <p className="mt-4 max-w-xl text-lg text-muted">
             A small shelter from what is already on the ground. Safe site, a bed, then a roof. In that order.
           </p>
+          <p className="mt-3 max-w-xl text-sm text-muted">{VOLUME_NOTE}</p>
         </section>
 
-        <section aria-label="Rules that do not change">
-          <ol className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-4">
-            {RULES.map((rule) => (
+        <section id="start" className="scroll-mt-20">
+          <h2 className="font-display text-2xl font-medium text-ink">Start here</h2>
+          <p className="mt-2 text-muted">Need shelter tonight?</p>
+          <ol className="mt-4 flex flex-col gap-2">
+            {START_HERE.map((item, index) => (
+              <li key={item} className="flex gap-3 rounded-md border border-line px-4 py-3">
+                <span className="font-display text-sm text-pine tabular-nums">{String(index + 1).padStart(2, "0")}</span>
+                <span className="text-sm text-ink">{item}</span>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section aria-label="Rules that do not change" className="mt-10">
+          <div className="rounded-lg border border-pine bg-paper p-4">
+            <p className="font-display text-sm text-pine tabular-nums">{RULES[0].n}</p>
+            <h2 className="mt-2 font-display text-lg font-medium text-ink">{RULES[0].title}</h2>
+            <p className="mt-1 max-w-2xl text-sm text-muted">{RULES[0].detail}</p>
+          </div>
+          <ol className="mt-2 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-4">
+            {RULES.slice(1).map((rule) => (
               <li key={rule.n} className="bg-paper p-4">
                 <p className="font-display text-sm text-pine tabular-nums">{rule.n}</p>
                 <h2 className="mt-2 font-display text-lg font-medium text-ink">{rule.title}</h2>
@@ -379,18 +415,25 @@ export function Guide() {
                   const on = Boolean(checks[step.id]);
                   return (
                     <li key={step.id}>
-                      <label
+                      <button
+                        type="button"
+                        role="checkbox"
+                        aria-checked={on}
+                        onClick={() => toggleStep(step.id)}
                         className={cn(
-                          "flex cursor-pointer gap-3 rounded-md border p-3",
+                          "press flex w-full gap-3 rounded-md border p-3 text-left",
                           on ? "border-pine bg-paper" : "border-line bg-paper",
                         )}
                       >
-                        <input
-                          type="checkbox"
-                          className="mt-1 size-5 shrink-0 accent-pine"
-                          checked={on}
-                          onChange={() => toggleStep(step.id)}
-                        />
+                        <span
+                          aria-hidden
+                          className={cn(
+                            "mt-1 flex size-5 shrink-0 items-center justify-center rounded-sm border",
+                            on ? "border-pine bg-pine text-paper" : "border-line bg-paper",
+                          )}
+                        >
+                          {on ? <Check className="size-3.5" strokeWidth={2.5} /> : null}
+                        </span>
                         <span className="min-w-0">
                           <span className="flex items-baseline gap-2">
                             <span className="font-display text-sm text-pine tabular-nums">
@@ -400,7 +443,7 @@ export function Guide() {
                           </span>
                           <span className="mt-1 block text-sm leading-relaxed text-muted">{step.detail}</span>
                         </span>
-                      </label>
+                      </button>
                     </li>
                   );
                 })}
@@ -520,12 +563,42 @@ export function Guide() {
           <p className="mt-6 max-w-2xl text-sm text-muted">{SIGNAL}</p>
         </section>
 
+        <section className="mt-12" aria-label="Permission and leave no trace">
+          <h2 className="font-display text-2xl font-medium text-ink">Permission and leave no trace</h2>
+          <ul className="mt-4 flex flex-col gap-3 rounded-lg border border-line p-5">
+            {PERMISSION.map((item) => (
+              <li key={item} className="text-sm text-ink">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="mt-12" aria-label="Children and tools">
+          <h2 className="font-display text-2xl font-medium text-ink">Children and tools</h2>
+          <ul className="mt-4 flex flex-col gap-3 rounded-lg border border-line p-5">
+            {KIDS.map((item) => (
+              <li key={item} className="text-sm text-ink">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section id="glossary" className="mt-12 scroll-mt-20">
+          <h2 className="font-display text-2xl font-medium text-ink">Glossary</h2>
+          <dl className="mt-4">
+            {GLOSSARY.map((entry) => (
+              <div key={entry.term} className="border-t border-line py-3">
+                <dt className="font-medium text-ink">{entry.term}</dt>
+                <dd className="mt-1 text-sm text-muted">{entry.detail}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+
         <footer className="mt-12 border-t border-line pt-6 pb-4">
-          <p className="max-w-2xl text-sm text-faint">
-            Field guidance for getting out of the weather. It is not a rescue service and not a substitute for
-            training. Terrain, weather, and your body decide what is safe. If you are injured or truly lost,
-            signal and stay put.
-          </p>
+          <p className="max-w-2xl text-sm text-faint">{FOOTER}</p>
         </footer>
       </main>
 
