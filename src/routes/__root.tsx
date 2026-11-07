@@ -3,7 +3,7 @@ import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import appCss from "../styles.css?url";
 
-const APP_NAME = "Survival Shelters: Bivvy";
+const APP_NAME = "Volume 25: Survival Shelters (The Education Revolution)";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -14,7 +14,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "A field guide to building a small shelter fast — lean-to, debris hut, tarp, shade, or snow trench — so you can get out of the weather.",
+          "Volume 25 of The Education Revolution, by Blue and the Awesome Dudes. A field guide to building a small shelter fast — lean-to, debris hut, tarp, shade, or snow trench — so you can get out of the weather.",
       },
       { name: "theme-color", content: "#f3efe6" },
     ],
